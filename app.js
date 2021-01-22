@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+const footballData = require('./data.json');
 
 
 app.get("/", (req, res) => {
@@ -8,7 +9,7 @@ app.get("/", (req, res) => {
 
 app.get("/love/:thing", (req, res) => {
     var thing = req.params.thing;
-    res.render("love.ejs", { thingVar: thing });
+    res.render("love.ejs", { thing: thing });
 })
 
 app.get("/posts", (req, res) => {
@@ -18,6 +19,12 @@ app.get("/posts", (req, res) => {
         { title: "Post3", author: "Dybala" }
     ]
     res.render("posts.ejs", { posts: posts });
+})
+
+app.get("/r/:subreddit",(req, res) => {
+    const {subreddit} = req.params;
+    const data = footballData[subreddit];
+    res.render("subreddit.ejs", {...data, subreddit});
 })
 
 app.listen(3000, () => {
