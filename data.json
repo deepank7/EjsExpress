@@ -1,0 +1,32 @@
+{
+    "football":{
+        "name": "Football",
+        "subscribers": "1M",
+        "description": "Everything on football",
+        "posts":[
+            {
+                "Player":"Ronaldo",
+                "Club":"Juventus"
+            },
+            {
+                "Player":"Rashford",
+                "Club":"United"
+            }
+        ]
+    },
+    "cricket":{
+        "name": "Cricket",
+        "subscribers": "0.5M",
+        "description": "Everything on Cricket",
+        "posts":[
+            {
+                "Player":"Virat",
+                "Country":"India"
+            },
+            {
+                "Player":"Cummins",
+                "Country":"Australia"
+            }
+        ]
+    }
+}
